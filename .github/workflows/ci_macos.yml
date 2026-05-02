@@ -68,6 +68,8 @@ jobs:
           brew update
           brew install gcc open-mpi python@3.13
           /opt/homebrew/bin/python3.13 -m pip install --break-system-packages pytest
+          ln -sf /opt/homebrew/bin/gfortran-15 /opt/homebrew/bin/gfortran
+          ln -sf /opt/homebrew/bin/gcc-15      /opt/homebrew/bin/gcc
 
       - name: test
         shell: bash
